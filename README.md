@@ -1,7 +1,7 @@
 # 3d-reconstruction-benchmark
 
 
-
+(暂时，待修改)
 #### **第一周：环境搭建、数据准备与模型**
 
 | 时间 | Li(PSR / SPSR) | Zhu (DGP / Stochastic PSR / NS-SPSR) |
