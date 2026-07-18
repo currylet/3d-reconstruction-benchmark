@@ -77,7 +77,7 @@ class BaseReconstructor(ABC):
         pass
 ```
 
-#### 2. Open3D SPSR 实现示例 (`src/wrappers/psr_spsr.py`)
+#### 2. Open3D SPSR 实现（使用基类版） (`src/wrappers/psr_spsr.py`)
 
 ```python
 import open3d as o3d
