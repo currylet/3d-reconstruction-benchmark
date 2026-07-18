@@ -6,7 +6,7 @@
 
 | 时间 | Li(PSR / SPSR) | Zhu (DGP / Stochastic PSR / NS-SPSR) |
 | :--- | :--- | :--- |
-| **Day 1-2** | **数据集准备与噪声生成：**<br>1. 下载 ABC dataset 的子集（或从 Point2Surf 提供的链接下载处理好的点云）。<br>2. 编写点云数据预处理脚本，实现对输入点云随机添加高斯噪声（位置噪声）和法向扰动（噪声测试）。 | **评测模块与通用接口：**<br>1. 配置PyTorch 运行环境。<br>2. 创建共享的 GitHub 仓库，确定统一的输入（`.ply` 格式，带 `x,y,z,nx,ny,nz`）与输出（`.obj` 或 `.ply` 网格）格式。<br>3. 基于 `point-cloud-utils` (pcu) 编写通用的几何精度评测模块（计算 Chamfer 距离、Hausdorff 距离等）。 |
+| **Day 1-2** | **数据集准备与噪声生成：**<br>1. 下载 ABC dataset和其他dataset（待定） 的子集（或从 Point2Surf 提供的链接下载处理好的点云）。<br>2. 编写点云数据预处理脚本，实现对输入点云随机添加高斯噪声（位置噪声）和法向扰动（噪声测试）。 | **评测模块与通用接口：**<br>1. 配置PyTorch 运行环境。<br>2. 创建共享的 GitHub 仓库，确定统一的输入（`.ply` 格式，带 `x,y,z,nx,ny,nz`）与输出（`.obj` 或 `.ply` 网格）格式。<br>3. 基于 `point-cloud-utils` (pcu) 编写通用的几何精度评测模块（计算 Chamfer 距离、Hausdorff 距离等）。 |
 | **Day 3-5** | **经典方法实现：**<br>1. 利用 Open3D 快速实现 PSR 和 SPSR，确保能够正确读取准备的数据并输出重建网格。<br>2. 封装成统一的 Python 接口。 | **DGP 方法实现：**<br>编写DGP代码，编写适配脚本，使 DGP 能读取统一格式的输入点云，并在单张样本上成功跑通优化流程，输出网格。 |
 | **Day 6-7** | **辅助支持与可视化准备：**<br>在本地配置可视化工具（如 MeshLab、CloudCompare 或 Polyscope），准备用于渲染对比图。 | **Stochastic PSR & NS-SPSR 实现：**<br>编写 Stochastic PSR 和 NS-SPSR 的代码。输出网格。
 
