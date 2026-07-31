@@ -1,0 +1,11 @@
+numpy>=1.22.0
+scipy>=1.7.0
+
+open3d>=0.16.0
+point-cloud-utils>=0.20.0
+gpytoolbox>=0.2.0
+
+setuptools
+wheel
+
+scikit-image
