@@ -67,7 +67,6 @@ class PoissonReconstructor(BaseReconstructor):
 
             mesh = o3d.io.read_triangle_mesh(output_mesh)
 
-            ## 裁切严重飞面
             bbox = pcd.get_axis_aligned_bounding_box()
             mesh = mesh.crop(bbox)
 

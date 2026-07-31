@@ -31,7 +31,6 @@ def load_and_preprocess_point_cloud(input_path, output_path=None, noise_std=0.0,
     rng = np.random.default_rng(seed)
 
     # load original point clouds
-    ## 改动：兼容各种格式的点云输入
     if input_path.endswith(".npy"):
         points = np.load(input_path)
         points = np.asarray(points[:, :3], dtype=np.float32)

@@ -64,7 +64,6 @@ EVAL_SETTINGS = {
 # Main Evaluation Pipeline
 # ==========================================
 def main():
-    ## 这里改了路径，方便直接创建/覆盖文件夹
     results_root = "../results"
     csv_log_path = os.path.join(results_root, "metrics.csv")
 
@@ -88,7 +87,6 @@ def main():
     
     # Nested loop: Model -> Scenario -> Algorithm
     for model_name, model_path in TEST_MODELS.items():
-        ## 这里也改了路径
         model_pointcloud_dir = os.path.join(pointcloud_root, model_name)
         os.makedirs(model_pointcloud_dir, exist_ok=True)
 
@@ -101,7 +99,6 @@ def main():
             # Load and apply geometric degradation
             # Pass configuration parameters to the function in `dataset.py` by unpacking the dictionary
             # save altered point cloud for reference
-            ## 这里也改了路径
             debug_ply_path = os.path.join(model_pointcloud_dir, f"{setting_name}.ply")
             
             try:
@@ -132,7 +129,6 @@ def main():
                     continue
                 
                 # Save the generated mesh model
-                ## 这里也改了路径，这样文件夹结构为 model_01/Clean/PSR_model_01_clean.obj
                 setting_mesh_dir = os.path.join(model_mesh_dir, setting_name)
                 os.makedirs(setting_mesh_dir, exist_ok=True)
                 output_mesh_path = os.path.join(setting_mesh_dir, f"{method_name}_{model_name}_{setting_name}.obj")
