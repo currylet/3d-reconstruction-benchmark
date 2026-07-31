@@ -118,4 +118,3 @@ python src/run_benchmark.py
 * **Mesh Visualizations:** Reconstructed water-tight `.obj` models are saved to `results/meshes/`.
 * **Degraded Point Clouds:** Test point clouds generated under different robust settings are saved to `results/pointclouds/`.
 * **Quantitative Data:** All evaluation statistics (CD, HD, Runtime, Peak VRAM) are automatically logged to `results/metrics.csv`.
-```
